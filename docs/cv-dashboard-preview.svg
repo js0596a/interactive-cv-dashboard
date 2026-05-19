@@ -1,0 +1,65 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ECF7FF"/>
+      <stop offset="1" stop-color="#FFF7E8"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0EA5A4"/>
+      <stop offset="1" stop-color="#FF7A59"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1280" height="720" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#122133" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1280" height="720" fill="url(#bg)"/>
+
+  <circle cx="120" cy="70" r="220" fill="#0EA5A4" opacity="0.18"/>
+  <circle cx="1200" cy="140" r="260" fill="#FF7A59" opacity="0.16"/>
+  <circle cx="420" cy="760" r="280" fill="#3AA8FF" opacity="0.14"/>
+
+  <rect x="48" y="44" width="1184" height="632" rx="28" fill="#FFFFFF" fill-opacity="0.82" stroke="#D6E4F0" filter="url(#shadow)"/>
+
+  <rect x="84" y="82" width="1112" height="150" rx="20" fill="#FFFFFF" stroke="#E1EAF2"/>
+  <text x="114" y="128" fill="#0D7F7E" font-size="20" font-family="Arial, sans-serif" font-weight="700">Interactive CV Dashboard</text>
+  <text x="114" y="165" fill="#142233" font-size="42" font-family="Arial, sans-serif" font-weight="700">Eduardo Salgado-Liceaga</text>
+  <text x="114" y="198" fill="#42556A" font-size="20" font-family="Arial, sans-serif">Statistics • Data Science • Operations Research</text>
+
+  <rect x="84" y="260" width="286" height="378" rx="16" fill="#F9FCFF" stroke="#DCE9F5"/>
+  <text x="108" y="300" fill="#16212F" font-size="24" font-family="Arial, sans-serif" font-weight="700">Control Deck</text>
+
+  <rect x="108" y="326" width="238" height="46" rx="10" fill="#FFFFFF" stroke="#DCE9F5"/>
+  <text x="124" y="355" fill="#42556A" font-size="16" font-family="Arial, sans-serif">View: Projects</text>
+
+  <rect x="108" y="386" width="238" height="46" rx="10" fill="#FFFFFF" stroke="#DCE9F5"/>
+  <text x="124" y="415" fill="#42556A" font-size="16" font-family="Arial, sans-serif">Skill Level ≥ 8</text>
+
+  <rect x="108" y="446" width="238" height="46" rx="10" fill="#FFFFFF" stroke="#DCE9F5"/>
+  <text x="124" y="475" fill="#42556A" font-size="16" font-family="Arial, sans-serif">Tech: Dash, Python</text>
+
+  <rect x="394" y="260" width="802" height="378" rx="16" fill="#FFFFFF" stroke="#DCE9F5"/>
+
+  <rect x="420" y="286" width="352" height="100" rx="14" fill="#FFF7F1" stroke="#FFD5C9"/>
+  <text x="440" y="324" fill="#A14B33" font-size="13" font-family="Arial, sans-serif" font-weight="700">GEORGEHACKS 1ST PLACE</text>
+  <text x="440" y="350" fill="#16212F" font-size="22" font-family="Arial, sans-serif" font-weight="700">FoodBridge</text>
+  <text x="440" y="372" fill="#41566A" font-size="15" font-family="Arial, sans-serif">AI meal planning for affordable, personalized nutrition</text>
+
+  <rect x="792" y="286" width="378" height="100" rx="14" fill="#F4FBFF" stroke="#CFE8FA"/>
+  <text x="812" y="326" fill="#1B5B8A" font-size="14" font-family="Arial, sans-serif" font-weight="700">Top Skills</text>
+  <text x="812" y="350" fill="#16212F" font-size="16" font-family="Arial, sans-serif">Python • Dash • Plotly • SQL • ML</text>
+
+  <rect x="420" y="408" width="352" height="204" rx="14" fill="#F8FCFF" stroke="#D7E8F7"/>
+  <text x="440" y="438" fill="#2F475B" font-size="14" font-family="Arial, sans-serif" font-weight="700">Career Timeline</text>
+  <rect x="442" y="456" width="210" height="18" rx="9" fill="#0EA5A4" fill-opacity="0.7"/>
+  <rect x="442" y="486" width="180" height="18" rx="9" fill="#3AA8FF" fill-opacity="0.7"/>
+  <rect x="442" y="516" width="236" height="18" rx="9" fill="#FF7A59" fill-opacity="0.7"/>
+
+  <rect x="792" y="408" width="378" height="204" rx="14" fill="#FFFCF8" stroke="#F6E3C8"/>
+  <text x="812" y="438" fill="#5F4A2A" font-size="14" font-family="Arial, sans-serif" font-weight="700">Impact Snapshot</text>
+  <text x="812" y="472" fill="#16212F" font-size="36" font-family="Arial, sans-serif" font-weight="700">$2.1B</text>
+  <text x="812" y="496" fill="#41566A" font-size="15" font-family="Arial, sans-serif">market opportunity analyzed</text>
+
+  <rect x="812" y="522" width="335" height="62" rx="12" fill="url(#accent)"/>
+  <text x="830" y="558" fill="#FFFFFF" font-size="16" font-family="Arial, sans-serif" font-weight="700">View Live App • Devpost • GitHub</text>
+</svg>
