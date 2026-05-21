@@ -1,0 +1,43 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="360" fill="#F8FAFC"/>
+  <text x="36" y="40" fill="#0F172A" font-size="28" font-family="Arial, sans-serif" font-weight="700">Interactive CV System Architecture</text>
+
+  <rect x="40" y="84" width="230" height="108" rx="14" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="60" y="118" fill="#0F172A" font-size="16" font-family="Arial, sans-serif" font-weight="700">Data Layer</text>
+  <text x="60" y="144" fill="#334155" font-size="13" font-family="Arial, sans-serif">cv_data.py</text>
+  <text x="60" y="164" fill="#334155" font-size="13" font-family="Arial, sans-serif">Profile, Experience, Projects,</text>
+  <text x="60" y="182" fill="#334155" font-size="13" font-family="Arial, sans-serif">Skills, Education, Awards</text>
+
+  <path d="M278 138 H314" stroke="#64748B" stroke-width="3"/>
+  <polygon points="314,138 303,132 303,144" fill="#64748B"/>
+
+  <rect x="322" y="84" width="266" height="108" rx="14" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="342" y="118" fill="#0F172A" font-size="16" font-family="Arial, sans-serif" font-weight="700">Application Layer</text>
+  <text x="342" y="144" fill="#334155" font-size="13" font-family="Arial, sans-serif">app.py</text>
+  <text x="342" y="164" fill="#334155" font-size="13" font-family="Arial, sans-serif">Callbacks + filtering logic</text>
+  <text x="342" y="182" fill="#334155" font-size="13" font-family="Arial, sans-serif">Graphs, cards, view modes</text>
+
+  <path d="M596 138 H632" stroke="#64748B" stroke-width="3"/>
+  <polygon points="632,138 621,132 621,144" fill="#64748B"/>
+
+  <rect x="640" y="84" width="250" height="108" rx="14" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="660" y="118" fill="#0F172A" font-size="16" font-family="Arial, sans-serif" font-weight="700">Presentation Layer</text>
+  <text x="660" y="144" fill="#334155" font-size="13" font-family="Arial, sans-serif">Dash components</text>
+  <text x="660" y="164" fill="#334155" font-size="13" font-family="Arial, sans-serif">Plotly visualizations</text>
+  <text x="660" y="182" fill="#334155" font-size="13" font-family="Arial, sans-serif">Responsive layout + CSS theme</text>
+
+  <path d="M898 138 H934" stroke="#64748B" stroke-width="3"/>
+  <polygon points="934,138 923,132 923,144" fill="#64748B"/>
+
+  <rect x="942" y="84" width="220" height="108" rx="14" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="962" y="118" fill="#0F172A" font-size="16" font-family="Arial, sans-serif" font-weight="700">User Interaction</text>
+  <text x="962" y="144" fill="#334155" font-size="13" font-family="Arial, sans-serif">Mode switcher</text>
+  <text x="962" y="164" fill="#334155" font-size="13" font-family="Arial, sans-serif">Filters + search</text>
+  <text x="962" y="182" fill="#334155" font-size="13" font-family="Arial, sans-serif">Explore CV narrative</text>
+
+  <rect x="40" y="226" width="1122" height="96" rx="14" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="60" y="256" fill="#0F172A" font-size="16" font-family="Arial, sans-serif" font-weight="700">Engineering Tooling</text>
+  <text x="60" y="281" fill="#334155" font-size="13" font-family="Arial, sans-serif">Python: app runtime + data validation scripts + tests</text>
+  <text x="60" y="301" fill="#334155" font-size="13" font-family="Arial, sans-serif">Bash/Make: local workflows and link checks</text>
+  <text x="540" y="301" fill="#334155" font-size="13" font-family="Arial, sans-serif">YAML: CI automation in GitHub Actions</text>
+</svg>

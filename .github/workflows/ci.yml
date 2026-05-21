@@ -21,7 +21,16 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip install pytest
 
       - name: Syntax check
         run: |
           python -m py_compile app.py cv_data.py
+
+      - name: Validate CV data contract
+        run: |
+          python scripts/validate_cv_data.py
+
+      - name: Run tests
+        run: |
+          python -m pytest -q

@@ -3,3 +3,5 @@ __pycache__/
 .venv/
 .DS_Store
 .idea/
+.pytest_cache/
+.demo_frames/
