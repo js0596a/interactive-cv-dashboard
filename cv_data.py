@@ -24,6 +24,7 @@ EXPERIENCE = [
         "location": "León, Guanajuato, Mexico",
         "start_year": 2026,
         "end_year": 2026,
+        "section": "work",
         "highlights": [
             "Built interactive Python dashboards with Dash, Dash Mantine Components, Pandas, and Plotly to monitor leather tanning and retanning operations.",
             "Cleaned and transformed Excel-based production data into repeatable KPI workflows tracking weekly output, area processed, pieces processed, and yield.",
@@ -37,6 +38,7 @@ EXPERIENCE = [
         "location": "Washington, D.C.",
         "start_year": 2025,
         "end_year": 2025,
+        "section": "work",
         "highlights": [
             "Built Python and Power BI workflows to clean, join, and transform pricing, demand, and market data into dashboard-ready datasets.",
             "Performed exploratory analysis and scenario modeling on a $2.1B market opportunity to identify demand drivers and high-value segments.",
@@ -50,6 +52,7 @@ EXPERIENCE = [
         "location": "Washington, D.C.",
         "start_year": 2026,
         "end_year": 2026,
+        "section": "leadership",
         "highlights": [
             "Placed 1st in the UN & FAO problem-statement track with FoodBridge, an AI-powered meal-planning app for affordable personalized nutrition.",
             "Contributed to a 5-step workflow using health profile, dietary preferences, budget, and location data for meal plans and grocery lists.",
@@ -63,6 +66,7 @@ EXPERIENCE = [
         "location": "Washington, D.C.",
         "start_year": 2026,
         "end_year": 2026,
+        "section": "leadership",
         "highlights": [
             "Led a 5-member team building strategic asset-allocation recommendations for a $2.4B university endowment.",
             "Evaluated $290M in near-term funding needs and supported portfolio recommendations with liquidity and stagflation scenarios.",

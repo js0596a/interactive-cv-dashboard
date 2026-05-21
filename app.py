@@ -53,6 +53,30 @@ def filter_experience(tech_filter: list[str]) -> list[dict]:
     return filtered
 
 
+def classify_experience_section(role: dict) -> str:
+    section = str(role.get("section", "")).strip().lower()
+    if section in {"work", "professional"}:
+        return "work"
+    if section in {"leadership", "competition", "hackathon"}:
+        return "leadership"
+
+    company_text = f"{role.get('company', '')} {role.get('role', '')}".lower()
+    if "hackathon" in company_text or "competition" in company_text:
+        return "leadership"
+    return "work"
+
+
+def split_experience_sections(roles: list[dict]) -> tuple[list[dict], list[dict]]:
+    work_roles = []
+    leadership_roles = []
+    for role in roles:
+        if classify_experience_section(role) == "leadership":
+            leadership_roles.append(role)
+        else:
+            work_roles.append(role)
+    return work_roles, leadership_roles
+
+
 def card(title: str, value: str, subtitle: str) -> html.Div:
     return html.Div(
         className="kpi-card",
@@ -256,9 +280,9 @@ def make_project_cards(projects: list[dict]) -> list[html.Div]:
     return cards
 
 
-def make_experience_cards(roles: list[dict]) -> list[html.Div]:
+def make_experience_cards(roles: list[dict], empty_message: str) -> list[html.Div]:
     if not roles:
-        return [html.Div("No experience roles match this tech filter.", className="empty-state")]
+        return [html.Div(empty_message, className="empty-state")]
 
     cards = []
     for role in sorted(roles, key=lambda r: r["start_year"], reverse=True):
@@ -449,8 +473,10 @@ app.layout = html.Div(
                                     id="experience-panel",
                                     className="panel",
                                     children=[
-                                        html.H3("Experience Story"),
-                                        html.Div(id="experience-grid", className="card-grid"),
+                                        html.H3("Work Experience"),
+                                        html.Div(id="work-experience-grid", className="card-grid"),
+                                        html.H3("Leadership Experience"),
+                                        html.Div(id="leadership-experience-grid", className="card-grid"),
                                         html.H3("Education"),
                                         html.Div(id="education-grid", className="education-grid"),
                                         html.H3("Scholarships & Awards"),
@@ -492,7 +518,8 @@ app.layout = html.Div(
     Output("skill-bubbles", "figure"),
     Output("project-score", "figure"),
     Output("project-grid", "children"),
-    Output("experience-grid", "children"),
+    Output("work-experience-grid", "children"),
+    Output("leadership-experience-grid", "children"),
     Output("education-grid", "children"),
     Output("awards-grid", "children"),
     Output("skill-chips", "children"),
@@ -510,6 +537,7 @@ def refresh_dashboard(category: str, min_level: int, tech_filter: list[str], sea
     skill_rows = flatten_skills(category, min_level)
     projects = filter_projects(tech_filter, search)
     roles = filter_experience(tech_filter)
+    work_roles, leadership_roles = split_experience_sections(roles)
     award_funding = sum((item.get("amount") or 0) for item in AWARDS)
 
     min_start = min(item["start_year"] for item in EXPERIENCE)
@@ -541,7 +569,8 @@ def refresh_dashboard(category: str, min_level: int, tech_filter: list[str], sea
         make_skill_bubble_figure(skill_rows),
         make_project_score_figure(projects),
         make_project_cards(projects),
-        make_experience_cards(roles),
+        make_experience_cards(work_roles, "No work-experience roles match this tech filter."),
+        make_experience_cards(leadership_roles, "No leadership roles match this tech filter."),
         make_education_cards(),
         make_award_cards(),
         make_skill_chips(skill_rows[:24]),
