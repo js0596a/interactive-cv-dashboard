@@ -28,6 +28,6 @@ The project is configuration-driven: `cv_data.py` acts as a structured data sour
 
 ## Automation assets
 
-- `scripts/capture_demo.py`: generates `docs/cv-dashboard-demo.gif` from live app interactions
+- `scripts/capture_demo.py`: captures repeatable walkthrough visuals from live app interactions
 - `scripts/check_links.sh`: HTTP checks for links defined in `cv_data.py`
 - `Makefile`: repeatable local commands for setup, check, test, and demo generation
