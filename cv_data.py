@@ -13,6 +13,7 @@ PROFILE = {
         "GitHub": "https://github.com/js0596a",
         "LinkedIn": "https://linkedin.com/in/edu-sal",
         "Devpost (FoodBridge)": "https://devpost.com/software/food-bridge-isqzu0",
+        "Recurtido MLP Repo": "https://github.com/js0596a/recurtido-mlp-dashboard",
     },
 }
 
@@ -85,7 +86,7 @@ PROJECTS = [
         "description": "Interactive operations dashboards for leather tanning and retanning KPI monitoring.",
         "impact": "Improved visibility into weekly output, yield, and process performance.",
         "tech": ["Python", "Dash", "Plotly", "Pandas", "Excel"],
-        "link": "https://github.com/js0596a",
+        "link": "https://github.com/js0596a/recurtido-mlp-dashboard",
         "score": 8.9,
     },
     {
@@ -93,7 +94,7 @@ PROJECTS = [
         "description": "MLP regression model for expected production area forecasting using operational features.",
         "impact": "Enabled planning analysis with model-based production expectations.",
         "tech": ["Python", "Scikit-learn", "MLP", "Regression"],
-        "link": "https://github.com/js0596a",
+        "link": "https://github.com/js0596a/recurtido-mlp-dashboard",
         "score": 8.6,
     },
     {
