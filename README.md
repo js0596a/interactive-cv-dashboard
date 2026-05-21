@@ -4,6 +4,13 @@
 
 ![Live Demo GIF](docs/cv-dashboard-demo.gif)
 
+If GIF autoplay feels too fast in your browser, use the static walkthrough screenshots:
+
+![Overview](docs/screenshots/01-overview.png)
+![Experience and Awards](docs/screenshots/02-experience-awards.png)
+![Projects - FoodBridge](docs/screenshots/03-projects-foodbridge.png)
+![Skills](docs/screenshots/04-skills.png)
+
 Interactive, recruiter-facing CV product built with Dash + Plotly and engineered like a software project.
 
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
@@ -20,6 +27,7 @@ Interactive, recruiter-facing CV product built with Dash + Plotly and engineered
 
 - Architecture image: `docs/cv-dashboard-preview.svg`
 - Live app demo GIF: `docs/cv-dashboard-demo.gif`
+- Walkthrough screenshots: `docs/screenshots/`
 - System architecture diagram: `docs/cv-architecture.svg`
 - Architecture notes: `docs/ARCHITECTURE.md`
 
@@ -45,7 +53,12 @@ Interactive, recruiter-facing CV product built with Dash + Plotly and engineered
 │   ├── ARCHITECTURE.md
 │   ├── cv-architecture.svg
 │   ├── cv-dashboard-demo.gif
-│   └── cv-dashboard-preview.svg
+│   ├── cv-dashboard-preview.svg
+│   └── screenshots/
+│       ├── 01-overview.png
+│       ├── 02-experience-awards.png
+│       ├── 03-projects-foodbridge.png
+│       └── 04-skills.png
 ├── scripts/
 │   ├── capture_demo.py
 │   ├── check_links.sh
@@ -58,18 +71,21 @@ Interactive, recruiter-facing CV product built with Dash + Plotly and engineered
 └── .github/workflows/ci.yml
 ```
 
-## Run Locally
+## One Copy-Paste Setup + Run (macOS/Linux)
 
 ```bash
+git clone https://github.com/js0596a/interactive-cv-dashboard.git
+cd interactive-cv-dashboard
 python3 -m venv .venv
 source .venv/bin/activate
+python -m pip install --upgrade pip
 pip install -r requirements.txt
 python app.py
 ```
 
 Open `http://127.0.0.1:8050`
 
-If port `8050` is busy:
+If port `8050` is busy, run:
 
 ```bash
 python -c "from app import app; app.run(debug=True, port=8051)"

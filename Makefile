@@ -29,4 +29,4 @@ link-check:
 	bash scripts/check_links.sh
 
 demo-gif:
-	$(VENV_PY) scripts/capture_demo.py
+	$(VENV_PY) scripts/capture_demo.py --duration 1.05 --hold-start 7 --hold-middle 5 --hold-end 10

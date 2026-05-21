@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import os
 from pathlib import Path
+import shutil
 import subprocess
 import sys
 import time
@@ -27,20 +28,47 @@ def wait_for_server(url: str, timeout: float = 30.0) -> None:
     raise TimeoutError(f"Server did not start in time: {url}")
 
 
-def build_gif(frames: list[Path], output_path: Path) -> None:
+def build_gif(
+    frames: list[Path],
+    output_path: Path,
+    frame_duration: float,
+    hold_start: int,
+    hold_middle: int,
+    hold_end: int,
+) -> None:
     images = []
     for i, frame_path in enumerate(frames):
         frame = Image.open(frame_path).convert("RGB")
         frame = frame.resize((1200, 760), Image.Resampling.LANCZOS)
-        repeats = 4 if i in (0, len(frames) - 1) else 2
+        if i == 0:
+            repeats = hold_start
+        elif i == len(frames) - 1:
+            repeats = hold_end
+        else:
+            repeats = hold_middle
         for _ in range(repeats):
             images.append(frame.copy())
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    imageio.mimsave(output_path, images, duration=0.55, loop=0)
+    imageio.mimsave(output_path, images, duration=frame_duration, loop=0)
 
 
-def run_capture(port: int, output_path: Path) -> None:
+def export_screenshots(frames: list[Path], screenshots_dir: Path) -> None:
+    screenshots_dir.mkdir(parents=True, exist_ok=True)
+    for frame_path in frames:
+        target = screenshots_dir / frame_path.name
+        shutil.copy2(frame_path, target)
+
+
+def run_capture(
+    port: int,
+    output_path: Path,
+    frame_duration: float,
+    hold_start: int,
+    hold_middle: int,
+    hold_end: int,
+    screenshots_dir: Path | None,
+) -> None:
     url = f"http://127.0.0.1:{port}"
     env = os.environ.copy()
 
@@ -95,7 +123,16 @@ def run_capture(port: int, output_path: Path) -> None:
             frames_dir / "03-projects-foodbridge.png",
             frames_dir / "04-skills.png",
         ]
-        build_gif(frame_paths, output_path)
+        build_gif(
+            frame_paths,
+            output_path,
+            frame_duration=frame_duration,
+            hold_start=hold_start,
+            hold_middle=hold_middle,
+            hold_end=hold_end,
+        )
+        if screenshots_dir is not None:
+            export_screenshots(frame_paths, screenshots_dir)
 
     finally:
         server.terminate()
@@ -113,11 +150,41 @@ def main() -> int:
         default=str(ROOT / "docs" / "cv-dashboard-demo.gif"),
         help="Output GIF path",
     )
+    parser.add_argument(
+        "--duration",
+        type=float,
+        default=1.05,
+        help="Seconds per GIF frame (higher is slower).",
+    )
+    parser.add_argument("--hold-start", type=int, default=7, help="Repeats for first frame.")
+    parser.add_argument("--hold-middle", type=int, default=5, help="Repeats for middle frames.")
+    parser.add_argument("--hold-end", type=int, default=10, help="Repeats for final frame.")
+    parser.add_argument(
+        "--screenshots-dir",
+        default=str(ROOT / "docs" / "screenshots"),
+        help="Directory to export PNG screenshots.",
+    )
+    parser.add_argument(
+        "--skip-screenshots",
+        action="store_true",
+        help="Disable screenshot export.",
+    )
     args = parser.parse_args()
 
     output = Path(args.output).resolve()
-    run_capture(port=args.port, output_path=output)
+    shots_dir = None if args.skip_screenshots else Path(args.screenshots_dir).resolve()
+    run_capture(
+        port=args.port,
+        output_path=output,
+        frame_duration=args.duration,
+        hold_start=args.hold_start,
+        hold_middle=args.hold_middle,
+        hold_end=args.hold_end,
+        screenshots_dir=shots_dir,
+    )
     print(f"Demo GIF written to {output}")
+    if shots_dir is not None:
+        print(f"Screenshots exported to {shots_dir}")
     return 0
 
 
