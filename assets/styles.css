@@ -234,7 +234,7 @@ body {
 
 .kpi-row {
   display: grid;
-  grid-template-columns: repeat(4, minmax(130px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 0.65rem;
   margin-bottom: 0.7rem;
 }
@@ -284,13 +284,19 @@ body {
 
 .project-card,
 .experience-card,
-.education-card {
+.education-card,
+.award-card {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 0.82rem;
   box-shadow: 0 8px 18px rgba(18, 25, 34, 0.08);
   animation: fadeLift 0.55s ease;
+}
+
+.award-card {
+  border-color: rgba(255, 209, 102, 0.55);
+  background: linear-gradient(150deg, rgba(255, 250, 236, 0.94), rgba(255, 255, 255, 0.82));
 }
 
 .card-title {

@@ -3,7 +3,7 @@ from __future__ import annotations
 from dash import Dash, Input, Output, dcc, html
 import plotly.graph_objects as go
 
-from cv_data import EDUCATION, EXPERIENCE, PROFILE, PROJECTS, SKILLS
+from cv_data import AWARDS, EDUCATION, EXPERIENCE, PROFILE, PROJECTS, SKILLS
 
 ACCENT_COLORS = ["#0ea5a4", "#ff7a59", "#ffd166", "#3aa8ff", "#6b9ac4", "#f29e4c"]
 
@@ -292,6 +292,29 @@ def make_education_cards() -> list[html.Div]:
     return cards
 
 
+def make_award_cards() -> list[html.Div]:
+    if not AWARDS:
+        return [html.Div("No scholarships or awards added yet.", className="empty-state")]
+
+    cards = []
+    for award in sorted(AWARDS, key=lambda item: item.get("year", 0), reverse=True):
+        amount = award.get("amount")
+        amount_text = f"${amount:,}" if amount else "Recognition"
+        summary = f"{award['type']} | {amount_text}"
+        cards.append(
+            html.Div(
+                className="award-card",
+                children=[
+                    html.Div(award["title"], className="card-title"),
+                    html.Div(f"{award['year']} | {award['issuer']}", className="card-meta"),
+                    html.Div(summary, className="card-impact"),
+                    html.Ul([html.Li(item) for item in award["details"]], className="bullet-list"),
+                ],
+            )
+        )
+    return cards
+
+
 def make_skill_chips(skill_rows: list[dict]) -> list[html.Span]:
     if not skill_rows:
         return [html.Span("No skills selected", className="tag")]
@@ -430,6 +453,8 @@ app.layout = html.Div(
                                         html.Div(id="experience-grid", className="card-grid"),
                                         html.H3("Education"),
                                         html.Div(id="education-grid", className="education-grid"),
+                                        html.H3("Scholarships & Awards"),
+                                        html.Div(id="awards-grid", className="card-grid"),
                                     ],
                                 ),
                                 html.Div(
@@ -469,6 +494,7 @@ app.layout = html.Div(
     Output("project-grid", "children"),
     Output("experience-grid", "children"),
     Output("education-grid", "children"),
+    Output("awards-grid", "children"),
     Output("skill-chips", "children"),
     Output("overview-panel", "style"),
     Output("experience-panel", "style"),
@@ -484,6 +510,7 @@ def refresh_dashboard(category: str, min_level: int, tech_filter: list[str], sea
     skill_rows = flatten_skills(category, min_level)
     projects = filter_projects(tech_filter, search)
     roles = filter_experience(tech_filter)
+    award_funding = sum((item.get("amount") or 0) for item in AWARDS)
 
     min_start = min(item["start_year"] for item in EXPERIENCE)
     max_end = max(item["end_year"] for item in EXPERIENCE)
@@ -494,6 +521,7 @@ def refresh_dashboard(category: str, min_level: int, tech_filter: list[str], sea
         card("Visible Projects", str(len(projects)), "Based on filters"),
         card("Visible Skills", str(len(skill_rows)), "Above minimum level"),
         card("Roles", str(len(roles)), "Matching tech filter"),
+        card("Awards", str(len(AWARDS)), f"${award_funding:,} scholarship funding"),
     ]
 
     view_title = {
@@ -515,6 +543,7 @@ def refresh_dashboard(category: str, min_level: int, tech_filter: list[str], sea
         make_project_cards(projects),
         make_experience_cards(roles),
         make_education_cards(),
+        make_award_cards(),
         make_skill_chips(skill_rows[:24]),
         overview_style,
         experience_style,

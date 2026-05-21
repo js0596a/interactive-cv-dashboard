@@ -142,3 +142,29 @@ EDUCATION = [
         "year": 2027,
     }
 ]
+
+AWARDS = [
+    {
+        "title": "Hanna Miriam Sandler Professional Society Membership Award",
+        "issuer": "Department of Mathematics and Statistics, American University",
+        "year": 2026,
+        "type": "Academic Award",
+        "amount": None,
+        "details": [
+            "Recognized for outstanding performance in a Department of Mathematics and Statistics course.",
+            "Award includes a one-year membership in either the Mathematical Association of America (MAA) or the American Statistical Association (ASA).",
+            "Membership benefits include undergraduate publications and access to research and networking conferences.",
+        ],
+    },
+    {
+        "title": "Capital CoLAB Emerging Tech Talent Scholarship",
+        "issuer": "Capital CoLAB (administered through American University)",
+        "year": 2026,
+        "type": "Scholarship",
+        "amount": 2500,
+        "details": [
+            "Awarded for integrating technical training and skills into the AU curriculum.",
+            "Academic Year 2026 scholarship award amount: $2,500.",
+        ],
+    },
+]
