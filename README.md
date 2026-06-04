@@ -46,6 +46,8 @@ The app now includes the same Curfimex language used in my resume:
 - Dash
 - Plotly
 - Pandas
+- Git/GitHub
+- Docker
 - CSS
 - Pytest
 

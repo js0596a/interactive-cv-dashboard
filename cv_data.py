@@ -31,7 +31,7 @@ EXPERIENCE = [
             "Performed EDA, data cleaning, and statistical modeling on plant process data to support queueing analysis, capability studies, and production planning decisions.",
             "Developed OR/data science tools for queueing simulation, control charts, process capability analysis, and Bayesian process classification.",
         ],
-        "tech": ["Python", "Dash", "Plotly", "Pandas", "SimPy", "SPC", "Queueing"],
+        "tech": ["Python", "Dash", "Plotly", "Pandas", "SimPy", "SPC", "Queueing", "Docker", "Git/GitHub"],
     },
     {
         "role": "Research Analyst (Part-Time Contractor)",
@@ -90,7 +90,7 @@ PROJECTS = [
         "name": "Production Flow Decision Studio",
         "description": "Dash + SimPy operations research app for lot-flow simulation, plant cost modeling, SPC/capability analysis, and Bayesian process classification.",
         "impact": "Transforms raw production logs into operational insights on throughput, bottlenecks, machine capacity, and process costs.",
-        "tech": ["Python", "Dash", "Plotly", "Pandas", "SimPy", "SPC", "Queueing"],
+        "tech": ["Python", "Dash", "Plotly", "Pandas", "SimPy", "SPC", "Queueing", "Docker", "Git/GitHub"],
         "link": "https://github.com/js0596a/empirical-lot-cost-simulator",
         "score": 9.4,
     },
@@ -146,6 +146,12 @@ SKILLS = {
         "Plotly": 9,
         "Power BI": 8,
         "Excel": 8,
+    },
+    "Developer Tools": {
+        "Git/GitHub": 8,
+        "Docker": 7,
+        "Version Control": 8,
+        "Containerization": 7,
     },
 }
 
