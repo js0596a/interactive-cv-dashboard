@@ -19,9 +19,9 @@ The app presents my education, work experience, leadership experience, projects,
 The current version reflects my updated resume focus:
 
 - Applied Statistics & Applied Mathematics student at American University.
-- Junior Data Scientist / Operations Research Analyst experience at Curfimex S.A. de C.V.
+- Data Scientist experience at Curfimex S.A. de C.V.
 - Production-flow simulation, queueing analysis, cost modeling, control charts, capability analysis, and Bayesian process classification.
-- Business analysis and market research experience through FinEx Concierge Solutions.
+- Data Analyst experience through FinEx Concierge Solutions LLC.
 - Leadership/project experience through FoodBridge and the Goldman Sachs Case Competition.
 
 ## What The App Shows
@@ -38,7 +38,7 @@ The app now includes the same Curfimex language used in my resume:
 
 - Built Python dashboards and simulation workflows to transform raw production logs into operational insights on throughput, bottlenecks, machine capacity, and process costs.
 - Performed EDA, data cleaning, and statistical modeling on plant process data to support queueing analysis, capability studies, and production planning decisions.
-- Developed OR/data science tools for queueing simulation, control charts, process capability analysis, and Bayesian process classification.
+- Developed data science tools for queueing simulation, control charts, process capability analysis, and Bayesian process classification.
 
 ## Tech Stack
 

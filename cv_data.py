@@ -20,7 +20,7 @@ PROFILE = {
 
 EXPERIENCE = [
     {
-        "role": "Junior Data Scientist / Operations Research Analyst",
+        "role": "Data Scientist",
         "company": "Curfimex S.A. de C.V.",
         "location": "León, Guanajuato, Mexico",
         "start_year": 2026,
@@ -29,47 +29,47 @@ EXPERIENCE = [
         "highlights": [
             "Built Python dashboards and simulation workflows to transform raw production logs into operational insights on throughput, bottlenecks, machine capacity, and process costs.",
             "Performed EDA, data cleaning, and statistical modeling on plant process data to support queueing analysis, capability studies, and production planning decisions.",
-            "Developed OR/data science tools for queueing simulation, control charts, process capability analysis, and Bayesian process classification.",
+            "Developed data science tools for queueing simulation, control charts, process capability analysis, and Bayesian process classification.",
         ],
         "tech": ["Python", "Dash", "Plotly", "Pandas", "SimPy", "SPC", "Queueing", "Docker", "Git/GitHub"],
     },
     {
-        "role": "Research Analyst (Part-Time Contractor)",
-        "company": "FinEx Concierge Solutions LLC",
+        "role": "Data Analyst",
+        "company": "FinEx Concierge Solutions LLC.",
         "location": "Washington, D.C.",
         "start_year": 2025,
         "end_year": 2025,
         "section": "work",
         "highlights": [
-            "Built Python and Power BI workflows to clean, join, and transform pricing, demand, and market data into dashboard-ready datasets.",
-            "Performed exploratory analysis and scenario modeling on a $2.1B market opportunity to identify demand drivers and high-value segments.",
-            "Partnered with leadership to translate business questions into KPIs and repeatable analytics workflows.",
+            "Built Python and Power BI workflows to clean, join, and transform raw pricing, demand, and market data into dashboard-ready datasets, improving reporting efficiency and forecast visibility.",
+            "Performed exploratory data analysis and scenario modeling on a $2.1B market opportunity to identify demand drivers, size high-value segments, and support data-driven strategic decisions.",
+            "Partnered with leadership to translate business questions into KPIs, data requirements, and reporting logic, helping turn ad hoc analysis into repeatable analytics workflows.",
         ],
         "tech": ["Python", "Power BI", "EDA", "Scenario Modeling", "Data Cleaning"],
     },
     {
-        "role": "Winner / Product & Data Contributor",
+        "role": "Product & Data Contributor",
         "company": "George Hacks x UN Reboot the Earth Hackathon — FoodBridge",
         "location": "Washington, D.C.",
         "start_year": 2026,
         "end_year": 2026,
         "section": "leadership",
         "highlights": [
-            "Placed 1st in the UN & FAO problem-statement track with FoodBridge, an AI-powered meal-planning app for affordable personalized nutrition.",
-            "Contributed to a 5-step workflow using health profile, dietary preferences, budget, and location data for meal plans and grocery lists.",
-            "Helped pitch a working prototype addressing food insecurity, nutrition equity, and budget-aware planning for diverse communities.",
+            "Placed 1st in the UN & FAO problem statement track by helping build FoodBridge, an AI-powered meal planning app for affordable, personalized nutrition.",
+            "Contributed to a 5-step workflow using health profile, dietary preferences, budget, and location data to generate meal plans and grocery lists.",
+            "Helped pitch a working prototype addressing food insecurity, nutrition equity, and budget-aware meal planning for diverse communities.",
         ],
         "tech": ["AI", "Product", "Data", "Prototyping", "GeorgeHacks"],
     },
     {
-        "role": "Team Lead / Presenter",
+        "role": "Team Lead",
         "company": "Goldman Sachs Case Competition — American University",
         "location": "Washington, D.C.",
-        "start_year": 2026,
-        "end_year": 2026,
+        "start_year": 2024,
+        "end_year": 2025,
         "section": "leadership",
         "highlights": [
-            "Led a 5-member team building strategic asset-allocation recommendations for a $2.4B university endowment.",
+            "Led a 5-member team in developing a strategic asset allocation recommendation for a $2.4B university endowment under liquidity, real-return, and ethical-divestment constraints.",
             "Evaluated $290M in near-term funding needs and supported portfolio recommendations with liquidity and stagflation scenarios.",
         ],
         "tech": ["Finance", "Strategy", "Scenario Analysis", "Presentation"],
@@ -157,7 +157,7 @@ SKILLS = {
 
 EDUCATION = [
     {
-        "degree": "Bachelor of Science in Applied Statistics & Applied Mathematics",
+        "degree": "Bachelor of Science in Applied Statistics & Applied Mathematics (BS)",
         "school": "American University, College of Arts and Sciences",
         "year": 2027,
     }
