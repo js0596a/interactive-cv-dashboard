@@ -1,38 +1,45 @@
 # Interactive CV Dashboard
 
-This is my resume as a web app.
+This is my resume as an interactive Dash app.
 
-I built it because a PDF can only show so much. With this version, people can click through my experience, projects, skills, and awards in a way that feels more real.
+The app presents my education, work experience, leadership experience, projects, skills, and awards in a format that is easier to explore than a static PDF. I use it as a portfolio companion to my resume, especially for showing the technical projects behind my operations research, analytics, and machine learning experience.
 
-## Quick Look
+## Resume Focus
 
-![Overview](docs/screenshots/01-overview.png)
-![Experience and Awards](docs/screenshots/02-experience-awards.png)
-![Projects - FoodBridge](docs/screenshots/03-projects-foodbridge.png)
-![Skills](docs/screenshots/04-skills.png)
+The current version reflects my updated resume focus:
 
-## Why I Made It
-
-- I wanted a portfolio piece that also works as my CV.
-- I wanted recruiters to see both technical depth and product thinking.
-- I wanted to highlight real projects, especially FoodBridge from GeorgeHacks.
+- Applied Statistics & Applied Mathematics student at American University.
+- Junior Data Scientist / Operations Research Analyst experience at Curfimex S.A. de C.V.
+- Production-flow simulation, queueing analysis, cost modeling, control charts, capability analysis, and Bayesian process classification.
+- Business analysis and market research experience through FinEx Concierge Solutions.
+- Leadership/project experience through FoodBridge and the Goldman Sachs Case Competition.
 
 ## What The App Shows
 
-- Overview: quick stats + profile summary
-- Experience: timeline-style cards
-- Projects: searchable project list with links
-- Skills: grouped technical skills
-- Awards: scholarships and academic recognition
+- Overview: profile summary, contact links, and quick stats.
+- Experience: work and leadership cards with role highlights.
+- Projects: searchable project list with links to repositories and external work.
+- Skills: grouped technical and analytical skills.
+- Awards: scholarships and academic recognition.
+
+## Featured Project Alignment
+
+The app now includes the same Curfimex language used in my resume:
+
+- Built Python dashboards and simulation workflows to transform raw production logs into operational insights on throughput, bottlenecks, machine capacity, and process costs.
+- Performed EDA, data cleaning, and statistical modeling on plant process data to support queueing analysis, capability studies, and production planning decisions.
+- Developed OR/data science tools for queueing simulation, control charts, process capability analysis, and Bayesian process classification.
 
 ## Tech Stack
 
 - Python
-- Dash + Plotly
+- Dash
+- Plotly
+- Pandas
 - CSS
 - Pytest
 
-## Run It (Copy/Paste)
+## Run It
 
 ```bash
 git clone https://github.com/js0596a/interactive-cv-dashboard.git
@@ -44,7 +51,11 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Open: `http://127.0.0.1:8050`
+Open:
+
+```text
+http://127.0.0.1:8050
+```
 
 If `8050` is busy:
 
@@ -52,20 +63,12 @@ If `8050` is busy:
 python -c "from app import app; app.run(debug=True, port=8051)"
 ```
 
-## Make It Yours
+## Main Links
 
-If you want to use this for your own CV:
-
-1. Edit `cv_data.py` with your profile, experience, projects, skills, and awards.
-2. Keep the same field names so the dashboard still renders correctly.
-3. Run the app again.
-
-## Links
-
+- Production Flow Decision Studio: [github.com/js0596a/empirical-lot-cost-simulator](https://github.com/js0596a/empirical-lot-cost-simulator)
+- Leather Operations MLP Dashboard: [github.com/js0596a/recurtido-mlp-dashboard](https://github.com/js0596a/recurtido-mlp-dashboard)
+- FoodBridge / GeorgeHacks: [devpost.com/software/food-bridge-isqzu0](https://devpost.com/software/food-bridge-isqzu0)
 - LinkedIn: [linkedin.com/in/edu-sal](https://linkedin.com/in/edu-sal)
-- GitHub: [github.com/js0596a](https://github.com/js0596a)
-- Devpost (FoodBridge / GeorgeHacks): [food-bridge-isqzu0](https://devpost.com/software/food-bridge-isqzu0)
-- Recurtido MLP Dashboard: [recurtido-mlp-dashboard](https://github.com/js0596a/recurtido-mlp-dashboard)
 
 ## Note
 

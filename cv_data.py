@@ -1,18 +1,19 @@
 PROFILE = {
     "name": "Eduardo Salgado-Liceaga",
-    "headline": "Statistics Student | Data Science & Operations Research",
+    "headline": "Applied Statistics & Applied Mathematics | Data Science & Operations Research",
     "location": "Washington, D.C.",
     "email": "js0596a@american.edu",
     "phone": "(202) 595-5801",
     "summary": (
-        "Statistics undergraduate at American University focused on applied machine learning, "
-        "analytics engineering, and operations research. I build data products that turn raw data "
-        "into clear decisions through dashboards, forecasting, and practical modeling workflows."
+        "Statistics and Applied Mathematics undergraduate at American University focused on operations "
+        "research, statistical modeling, and practical data products. I build dashboards and simulation "
+        "workflows that turn raw production and business data into planning decisions."
     ),
     "links": {
         "GitHub": "https://github.com/js0596a",
         "LinkedIn": "https://linkedin.com/in/edu-sal",
         "Devpost (FoodBridge)": "https://devpost.com/software/food-bridge-isqzu0",
+        "Production Flow Simulator": "https://github.com/js0596a/empirical-lot-cost-simulator",
         "Recurtido MLP Repo": "https://github.com/js0596a/recurtido-mlp-dashboard",
     },
 }
@@ -26,11 +27,11 @@ EXPERIENCE = [
         "end_year": 2026,
         "section": "work",
         "highlights": [
-            "Built interactive Python dashboards with Dash, Dash Mantine Components, Pandas, and Plotly to monitor leather tanning and retanning operations.",
-            "Cleaned and transformed Excel-based production data into repeatable KPI workflows tracking weekly output, area processed, pieces processed, and yield.",
-            "Developed an MLP regression model to predict expected production area from product family, leather type, and piece count for planning analysis.",
+            "Built Python dashboards and simulation workflows to transform raw production logs into operational insights on throughput, bottlenecks, machine capacity, and process costs.",
+            "Performed EDA, data cleaning, and statistical modeling on plant process data to support queueing analysis, capability studies, and production planning decisions.",
+            "Developed OR/data science tools for queueing simulation, control charts, process capability analysis, and Bayesian process classification.",
         ],
-        "tech": ["Python", "Dash", "Plotly", "Pandas", "Excel", "MLP"],
+        "tech": ["Python", "Dash", "Plotly", "Pandas", "SimPy", "SPC", "Queueing"],
     },
     {
         "role": "Research Analyst (Part-Time Contractor)",
@@ -86,20 +87,20 @@ PROJECTS = [
         "score": 9.8,
     },
     {
-        "name": "Curfimex Operations Dashboard",
-        "description": "Interactive operations dashboards for leather tanning and retanning KPI monitoring.",
-        "impact": "Improved visibility into weekly output, yield, and process performance.",
-        "tech": ["Python", "Dash", "Plotly", "Pandas", "Excel"],
-        "link": "https://github.com/js0596a/recurtido-mlp-dashboard",
-        "score": 8.9,
+        "name": "Production Flow Decision Studio",
+        "description": "Dash + SimPy operations research app for lot-flow simulation, plant cost modeling, SPC/capability analysis, and Bayesian process classification.",
+        "impact": "Transforms raw production logs into operational insights on throughput, bottlenecks, machine capacity, and process costs.",
+        "tech": ["Python", "Dash", "Plotly", "Pandas", "SimPy", "SPC", "Queueing"],
+        "link": "https://github.com/js0596a/empirical-lot-cost-simulator",
+        "score": 9.4,
     },
     {
-        "name": "Production Area Forecasting Model",
-        "description": "MLP regression model for expected production area forecasting using operational features.",
-        "impact": "Enabled planning analysis with model-based production expectations.",
-        "tech": ["Python", "Scikit-learn", "MLP", "Regression"],
+        "name": "Leather Operations MLP Dashboard",
+        "description": "Upload-your-own-data dashboard with local model training and inference workflow for leather operations forecasting.",
+        "impact": "Supports production planning analysis with model-based area forecasts.",
+        "tech": ["Python", "Scikit-learn", "MLP", "Regression", "Dash"],
         "link": "https://github.com/js0596a/recurtido-mlp-dashboard",
-        "score": 8.6,
+        "score": 8.7,
     },
     {
         "name": "FinEx Market Intelligence Workflow",
@@ -122,15 +123,23 @@ SKILLS = {
         "Pandas": 9,
         "NumPy": 8,
         "Data Cleaning": 9,
+        "Exploratory Data Analysis": 9,
         "KPI Reporting": 9,
         "Dashboarding": 9,
+        "Simulation Modeling": 9,
         "Scenario Analysis": 8,
     },
     "Machine Learning": {
         "Scikit-learn": 8,
         "TensorFlow/Keras": 7,
         "Regression Analysis": 9,
-        "Operations Research": 8,
+        "Machine Learning": 8,
+    },
+    "Operations Research": {
+        "Operations Research": 9,
+        "Queueing Analysis": 9,
+        "Statistical Process Control": 8,
+        "Process Capability": 8,
     },
     "Visualization & BI": {
         "Dash": 10,
@@ -142,7 +151,7 @@ SKILLS = {
 
 EDUCATION = [
     {
-        "degree": "B.S. in Statistics (Specialization: Applied Statistics)",
+        "degree": "Bachelor of Science in Applied Statistics & Applied Mathematics",
         "school": "American University, College of Arts and Sciences",
         "year": 2027,
     }
