@@ -4,6 +4,16 @@ This is my resume as an interactive Dash app.
 
 The app presents my education, work experience, leadership experience, projects, skills, and awards in a format that is easier to explore than a static PDF. I use it as a portfolio companion to my resume, especially for showing the technical projects behind my operations research, analytics, and machine learning experience.
 
+## Quick Look
+
+![Overview](docs/screenshots/01-overview.png)
+
+![Experience and awards](docs/screenshots/02-experience-awards.png)
+
+![Production Flow project](docs/screenshots/03-projects-production-flow.png)
+
+![Skills](docs/screenshots/04-skills.png)
+
 ## Resume Focus
 
 The current version reflects my updated resume focus:
